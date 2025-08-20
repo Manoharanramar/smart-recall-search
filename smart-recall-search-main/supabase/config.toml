@@ -1,0 +1,34 @@
+project_id = "gpugiyzopdiqtkvxuxpn"
+
+[api]
+enabled = true
+port = 54321
+schemas = ["public", "graphql_public"]
+extra_search_path = ["public", "extensions"]
+max_rows = 1000
+
+[auth]
+enabled = true
+port = 54324
+site_url = "http://127.0.0.1:3000"
+additional_redirect_urls = ["https://gpugiyzopdiqtkvxuxpn.supabase.co"]
+jwt_expiry = 3600
+enable_signup = true
+enable_email_confirmations = false
+
+[db]
+enabled = true
+port = 54322
+shadow_port = 54320
+major_version = 15
+
+[edge_functions]
+enabled = true
+port = 54323
+
+[functions.smart-search]
+verify_jwt = true
+
+[studio]
+enabled = true
+port = 54324
